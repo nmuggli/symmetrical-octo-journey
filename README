@@ -1,0 +1,22 @@
+README -- TSC Printer Driver
+
+1. make configure file
+# autoreconf -ivf
+
+2. setting compile 
+# ./configure
+
+  In the i686 environment, the default configuration is i386.
+  If want to compile a program to i386, can configure it as follows:
+# ./ configure --target=i386
+  In the x86_64 environment, the default configuration is x86_64.
+
+3. compile
+# make
+
+4. make install package
+# make gz
+
+  The generated package name is barcodedriver-x.x.xx-mm.tar.gz
+  Where x.x.xx is the version number,
+  mm is the CPU type, such as i386, i686, x86_64.

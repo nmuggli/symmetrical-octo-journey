@@ -1,0 +1,23 @@
+
+TSC Linux Printer driver Copyright 2005-2024 TSC printers
+
+This product includes software developed by
+TSC printers (https://apac.tscprinters.com/en)
+
+==============================================================
+ Samuel Chien
+ Copyright 2005-2024 TSC printers Ltd
+==============================================================
+
+This product includes some software developed by Apple Inc.
+(http://www.cups.org/).
+   API definitions for the Common UNIX Printing System (CUPS).
+   Copyright 2007 by Apple Inc.
+   Copyright 1997-2007 by Easy Software Products.
+
+This product includes some software developed by artofcode LLC.(http://www.artifex.com/)
+ Copyright (C) 2001-2006 artofcode LLC.
+   All Rights Reserved.
+
+
+
