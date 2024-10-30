@@ -18,6 +18,7 @@
  
  */
 
+
 #include "config.h"
 #include "common.h"
 #include "debug.h"
@@ -134,6 +135,7 @@ main(int  argc, char *argv[])
 		DrvDisable(pdev);
 		return (1);
 	}
+
 
 	if ( CheckTrialTime() )
 	{
@@ -315,6 +317,8 @@ int ParseDocData(DEVDATA *pdev, int fd, doc_t *doc)
 					if (y < nOutHeight )
 						memmove(PlaneData + WidthBytes * y, RowData, WidthBytes);
 				}
+				
+				//
 
 				for(y=0; y<WidthBytes * nOutHeight; y++)
 					PlaneData[y] = ~PlaneData[y];
@@ -384,7 +388,7 @@ DEVDATA* DrvEnable(int argc, char *argv[])
 		// Load CUPS lib
 		if ( LoadCupsLibrary(&pdev->lib_cups) )
 		{
-			Error_Log(LEVEL_ERROR, "Cannot load libcups or libcups version too old then 1.1.19\n");
+			Error_Log(LEVEL_ERROR, "Cannot load libcups or libcups version too older then 1.1.19\n");
 			DrvDisable(pdev);
 			pdev = NULL;
 		}

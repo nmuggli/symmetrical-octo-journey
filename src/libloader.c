@@ -51,17 +51,16 @@ int	LoadCupsLibrary(CUPSLIB_FUNCTION* cupsfun)
 		"/usr/lib64/libcups.so.2",
 		"/usr/local/lib64/libcups.so",
 		"/usr/local/lib64/libcups.so.2",
-		"/usr/lib/x86_64-linux-gnu/libcups.so.2",			
-		"/usr/lib/libcups.so.2",					//ubuntu 11.04
+		"/usr/lib/x86_64-linux-gnu/libcups.so.2",
 #else
 		"/usr/lib/libcups.so",
 		"/usr/lib/libcups.so.2",
 		"/usr/local/lib/libcups.so",
 		"/usr/local/lib/libcups.so.2",
-		"/usr/lib/i386-linux-gnu/libcups.so.2",				//add
-		"/usr/lib/i686-linux-gnu/libcups.so.2",				//add
-		"/usr/lib/aarch64-linux-gnu/libcups.so.2",			//ADD
-
+		"/usr/lib/i386-linux-gnu/libcups.so.2",
+		"/usr/lib/aarch64-linux-gnu/libcups.so.2",
+		"/usr/lib/mipsel-linux-gnu/libcups.so.2",			//add
+		
 #endif  // __x86_64__
 #endif
 		NULL,

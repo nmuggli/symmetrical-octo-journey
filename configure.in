@@ -99,6 +99,37 @@ FILES_PPD="$FILES_PPD ./ppd/TTP-346M.ppd"
 FILES_PPD="$FILES_PPD ./ppd/TTP-384M.ppd"
 FILES_PPD="$FILES_PPD ./ppd/TTP-644M.ppd"
 FILES_PPD="$FILES_PPD ./ppd/TTP-2410M.ppd"
+FILES_PPD="$FILES_PPD ./ppd/200dpi.ppd"
+FILES_PPD="$FILES_PPD ./ppd/300dpi.ppd"
+FILES_PPD="$FILES_PPD ./ppd/600dpi.ppd"
+FILES_PPD="$FILES_PPD ./ppd/Alpha-2R.ppd"
+FILES_PPD="$FILES_PPD ./ppd/Alpha-30L.ppd"
+FILES_PPD="$FILES_PPD ./ppd/Alpha-3R.ppd"
+FILES_PPD="$FILES_PPD ./ppd/Alpha-40L.ppd"
+FILES_PPD="$FILES_PPD ./ppd/Alpha-4L-D-W.ppd"
+FILES_PPD="$FILES_PPD ./ppd/Alpha-4L.ppd"
+FILES_PPD="$FILES_PPD ./ppd/Alpha-4R.ppd"
+FILES_PPD="$FILES_PPD ./ppd/Alpha-4R-W.ppd"
+FILES_PPD="$FILES_PPD ./ppd/DA200.ppd"
+FILES_PPD="$FILES_PPD ./ppd/DA210.ppd"
+FILES_PPD="$FILES_PPD ./ppd/DA220.ppd"
+FILES_PPD="$FILES_PPD ./ppd/DA300.ppd"
+FILES_PPD="$FILES_PPD ./ppd/DA310.ppd"
+FILES_PPD="$FILES_PPD ./ppd/DA320.ppd"
+FILES_PPD="$FILES_PPD ./ppd/DC200.ppd"
+FILES_PPD="$FILES_PPD ./ppd/DC200Pro.ppd"
+FILES_PPD="$FILES_PPD ./ppd/DH220E.ppd"
+FILES_PPD="$FILES_PPD ./ppd/DH220.ppd"
+FILES_PPD="$FILES_PPD ./ppd/DH240.ppd"
+FILES_PPD="$FILES_PPD ./ppd/DH320E.ppd"
+FILES_PPD="$FILES_PPD ./ppd/DH320.ppd"
+FILES_PPD="$FILES_PPD ./ppd/DH340.ppd"
+FILES_PPD="$FILES_PPD ./ppd/DL240.ppd"
+FILES_PPD="$FILES_PPD ./ppd/DL241.ppd"
+FILES_PPD="$FILES_PPD ./ppd/E200.ppd"
+FILES_PPD="$FILES_PPD ./ppd/E210.ppd"
+FILES_PPD="$FILES_PPD ./ppd/E300.ppd"
+FILES_PPD="$FILES_PPD ./ppd/E310.ppd"
 
 ##########################################################
 
@@ -126,7 +157,35 @@ AC_CONFIG_FILES([Makefile
 				ppd/TTP-346M.ppd
 				ppd/TTP-384M.ppd
 				ppd/TTP-644M.ppd
-				ppd/TTP-2410M.ppd
+				ppd/200dpi.ppd
+				ppd/300dpi.ppd
+				ppd/600dpi.ppd
+				ppd/Alpha-2R.ppd
+				ppd/Alpha-30L.ppd
+                ppd/Alpha-40L.ppd
+                ppd/Alpha-4L-D-W.ppd
+                ppd/Alpha-4L.ppd
+                ppd/Alpha-4R.ppd
+                ppd/Alpha-4R-W.ppd
+                ppd/DA200.ppd
+                ppd/DA210.ppd
+                ppd/DA220.ppd
+                ppd/DA300.ppd
+                ppd/DA310.ppd
+                ppd/DA320.ppd
+                ppd/DC200.ppd
+                ppd/DC200Pro.ppd
+                ppd/DH220E.ppd
+                ppd/DH220.ppd
+                ppd/DH240.ppd
+                ppd/DH320.ppd
+                ppd/DH340.ppd
+                ppd/DL240.ppd
+                ppd/DL241.ppd
+                ppd/E200.ppd
+                ppd/E210.ppd
+                ppd/E310.ppd
+                
 				])
 AC_OUTPUT()
 

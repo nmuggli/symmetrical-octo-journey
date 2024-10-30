@@ -17,6 +17,7 @@
  *  limitations under the License.
  *
  */
+
 #ifndef _DEVOPTION_H
 #define _DEVOPTION_H
 
@@ -26,8 +27,6 @@
 #define	PPD_ATTR_SPCFILE		"SPCFILE"
 #define	PPD_ATTR_JBIGLEVER		"JBIGLever"
 #define	PPD_TSCATTR_UTILITY		"TscUtility"
-//#define	PPD_TSCATTR_UTILITY		"tscUtility"
-
 
 #define PPD_TSC_ATTRDATA		"TscAttrData"
 #define PPD_TSC_ATTRDATA_OPT	"Options"

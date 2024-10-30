@@ -73,7 +73,6 @@ int TSPL_SendJobStart(DEVMODE *pdm)
 			printer_printf("BLINE %.1f mm,%.1f mm\r\n", POINT2MM(pdm->dmGapHeight), POINT2MM(pdm->dmGapOffset));
 		break;
 	case DMMEDIATYPE_CONTINUE:		// Continue
-		printer_printf("GAP 2,0\r\n");
 		printer_printf("GAP 0,0\r\n");
 		break;
 	}

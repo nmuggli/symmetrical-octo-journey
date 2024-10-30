@@ -1,0 +1,212 @@
+#!/bin/bash
+#
+# batch file to install printer driver
+#
+
+################################################################################
+#
+# Make sure only root can run our script
+#
+if [ "$(id -u)" != "0" ]; then
+   echo "    Install MUST be run as root" 1>&2
+   exit 1
+fi
+
+BUILD_CPU=@target_cpu@
+TARGET_CPU=`uname -m`
+INSTALL_PATH="@USER_INSTALL_PATH@"
+
+################################################################################
+#
+# echo informations
+#
+
+echo
+echo "    start <BarCode Printer Driver ($BUILD_CPU)> install......"
+
+################################################################################
+#
+# check program cup can install to thie system
+#
+CAN_INSTALL=no
+FILTER_PATH_SEARCH=""
+MODEL_PATH_SEARCH=""
+
+MODEL_PATH_SEARCH="$MODEL_PATH_SEARCH /usr/share/cups/model"
+MODEL_PATH_SEARCH="$MODEL_PATH_SEARCH /usr/local/share/cups/model"
+
+case $TARGET_CPU in
+	i[345]86)
+		case $BUILD_CPU in
+			i386)
+				CAN_INSTALL=yes
+			;;
+		esac
+	;;
+	i686)
+		case $BUILD_CPU in
+			i[36]86)
+				CAN_INSTALL=yes
+			;;
+		esac
+	;;
+	x86_64)
+		case $BUILD_CPU in
+			x86_64)
+				CAN_INSTALL=yes
+			;;
+		esac
+		FILTER_PATH_SEARCH="$FILTER_PATH_SEARCH /usr/lib64/cups/filter"
+		FILTER_PATH_SEARCH="$FILTER_PATH_SEARCH /usr/libexec64/cups/filter"
+		FILTER_PATH_SEARCH="$FILTER_PATH_SEARCH /usr/local/lib64/cups/filter"
+		FILTER_PATH_SEARCH="$FILTER_PATH_SEARCH /usr/local/libexec64/cups/filter"
+
+		MODEL_PATH_SEARCH="$MODEL_PATH_SEARCH /usr/share/ppd"
+	;;
+	*)
+	;;
+esac
+
+FILTER_PATH_SEARCH="$FILTER_PATH_SEARCH /usr/lib/cups/filter"
+FILTER_PATH_SEARCH="$FILTER_PATH_SEARCH /usr/libexec/cups/filter"
+FILTER_PATH_SEARCH="$FILTER_PATH_SEARCH /usr/local/lib/cups/filter"
+FILTER_PATH_SEARCH="$FILTER_PATH_SEARCH /usr/local/libexec/cups/filter"
+
+
+if test "x$CAN_INSTALL" != "xyes"; then
+	echo "the package is build for $BUILD_CPU cpu, can not install to $TARGET_CPU system"
+    exit 1
+fi
+
+################################################################################
+#
+# find install dir
+#
+FILTER_PATH=""
+for DIR in $FILTER_PATH_SEARCH; do
+	if test -d $DIR
+	then
+		FILTER_PATH=$DIR
+		break
+	fi
+done
+MODEL_PATH=""
+for DIR in $MODEL_PATH_SEARCH; do
+	if test -d $DIR
+	then
+		MODEL_PATH=$DIR
+		break
+	fi
+done
+
+if test "x$FILTER_PATH" == "x"
+then
+	echo "  Cannot found CUPS filter path"
+	exit
+fi
+if test "x$MODEL_PATH" == "x"
+then
+	echo "  Cannot found CUPS model path"
+	exit
+fi
+
+FILTER_PROGRAMS="@FILTER_PROGRAMS@"
+
+################################################################################
+#
+# check and execute uninstall shell script
+#
+
+if test -f $INSTALL_PATH/uninstall-driver
+then
+  echo "    execute uninstall shell script now......"
+  if !($INSTALL_PATH/uninstall-driver)
+  then
+    echo "    uninstall old <BarCode Printer Driver> failed"
+    echo "    install driver failed"
+    echo
+    exit 1
+  fi
+fi
+
+
+################################################################################
+#
+# echo informations
+#
+
+echo "    start copy files......"
+
+################################################################################
+#
+# set own, grp and permissions
+#
+chown -R root:root ./*
+chmod 644  ./ppd/*.ppd
+chmod 644  ./barcodeprintersetting.desktop
+chmod 644  ./thermalprinterui.png
+chmod 755  ./thermalprinterui
+chmod 755  ./thermalprinterut
+for FILTER in $FILTER_PROGRAMS; do
+	chmod 755  ./$FILTER
+done
+chmod 744  ./uninstall-driver
+
+################################################################################
+#
+# make install dir
+#
+mkdir -p $MODEL_PATH/@MANUFACTURER_NAME@/
+chown -R root:root $MODEL_PATH/@MANUFACTURER_NAME@/
+chmod -R 755 $MODEL_PATH/@MANUFACTURER_NAME@/
+
+mkdir -p $INSTALL_PATH/
+chown -R root:root $INSTALL_PATH/
+chmod -R 755 $INSTALL_PATH/
+
+
+################################################################################
+#
+# copy files
+#
+for FILTER in $FILTER_PROGRAMS; do
+	cp ./$FILTER $FILTER_PATH/
+done
+cp ./thermalprinterui $INSTALL_PATH/
+cp ./thermalprinterut $INSTALL_PATH/
+cp ./thermalprinterui.png $INSTALL_PATH/
+cp ./uninstall-driver $INSTALL_PATH/
+cp ./ppd/*.ppd $MODEL_PATH/@MANUFACTURER_NAME@/
+
+chmod 4755 $INSTALL_PATH/thermalprinterut
+
+if test -d /usr/share/applications/
+then
+  cp ./barcodeprintersetting.desktop /usr/share/applications/
+fi
+
+echo "    restart spooler - CUPS"
+################################################################################
+#
+# restart 
+#
+if test -f /etc/init.d/cups
+then
+  /etc/init.d/cups restart
+else
+  if test -f /etc/init.d/cupsys
+  then
+    /etc/init.d/cupsys restart
+  fi
+fi
+
+################################################################################
+#
+# echo informations
+#
+
+echo "    install driver completed"
+echo
+
+exit 0
+

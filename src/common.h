@@ -18,7 +18,7 @@
  *	
  *
  */
- 
+
 #ifndef _COMMON_H_
 #define _COMMON_H_
 
@@ -29,7 +29,6 @@
 #include <stdarg.h>
 #include <memory.h>
 #include <fcntl.h>
-
 #include <limits.h>
 #include <ctype.h>
 #include <string.h>
