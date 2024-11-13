@@ -50,27 +50,27 @@
 
 *OpenUI *PageSize/Page Size: PickOne
 *OrderDependency: 10 AnySetup *PageSize
-*DefaultPageSize: w2h4
-*PageSize w2h4/2 x 4 (2.00 in x 4.00 in): "<</PageSize[144 288]/ImagingBBox null>>setpagedevice"
-*PageSize w4h4/4 x 4 (4.00 in x 4.00 in): "<</PageSize[288 288]/ImagingBBox null>>setpagedevice"
-*PageSize w4h6/4 x 6 (4.00 in x 6.00 in): "<</PageSize[288 432]/ImagingBBox null>>setpagedevice"
+*DefaultPageSize: w144h288
+*PageSize w144h288/2 x 4 (2.00 in x 4.00 in): "<</PageSize[144 288]/ImagingBBox null>>setpagedevice"
+*PageSize w288h288/4 x 4 (4.00 in x 4.00 in): "<</PageSize[288 288]/ImagingBBox null>>setpagedevice"
+*PageSize w288h432/4 x 6 (4.00 in x 6.00 in): "<</PageSize[288 432]/ImagingBBox null>>setpagedevice"
 *CloseUI: *PageSize
 
 *OpenUI *PageRegion/Page Size: PickOne
 *OrderDependency: 10 AnySetup *PageRegion
-*DefaultPageRegion: w2h4
-*PageRegion w2h4/2 x 4 (2.00 in x 4.00 in): "<</PageSize[144 288]/ImagingBBox null>>setpagedevice"
-*PageRegion w4h4/4 x 4 (4.00 in x 4.00 in): "<</PageSize[288 288]/ImagingBBox null>>setpagedevice"
-*PageRegion w4h6/4 x 6 (4.00 in x 6.00 in): "<</PageSize[288 432]/ImagingBBox null>>setpagedevice"
+*DefaultPageRegion: w144h288
+*PageRegion w144h288/2 x 4 (2.00 in x 4.00 in): "<</PageSize[144 288]/ImagingBBox null>>setpagedevice"
+*PageRegion w288h288/4 x 4 (4.00 in x 4.00 in): "<</PageSize[288 288]/ImagingBBox null>>setpagedevice"
+*PageRegion w288h432/4 x 6 (4.00 in x 6.00 in): "<</PageSize[288 432]/ImagingBBox null>>setpagedevice"
 *CloseUI: *PageRegion
-
-*ImageableArea w2h4/2 x 4 (2.00 in x 4.00 in): "0 0 144 288"
-*ImageableArea w4h4/4 x 4 (4.00 in x 4.00 in): "0 0 288 288"
-*ImageableArea w4h6/4 x 6 (4.00 in x 6.00 in): "0 0 288 432"
-
-*PaperDimension w2h4/2 x 4 (2.00 in x 4.00 in): "144 288"
-*PaperDimension w4h4/4 x 4 (4.00 in x 4.00 in): "288 288"
-*PaperDimension w4h6/4 x 6 (4.00 in x 6.00 in): "288 432"
+*DefaultImageableArea: w144h288
+*ImageableArea w144h288/2 x 4 (2.00 in x 4.00 in): "0 0 144 288"
+*ImageableArea w288h288/4 x 4 (4.00 in x 4.00 in): "0 0 288 288"
+*ImageableArea w288h432/4 x 6 (4.00 in x 6.00 in): "0 0 288 432"
+*DefaultPaperDimension: w144h288
+*PaperDimension w144h288/2 x 4 (2.00 in x 4.00 in): "144 288"
+*PaperDimension w288h288/4 x 4 (4.00 in x 4.00 in): "288 288"
+*PaperDimension w288h432/4 x 6 (4.00 in x 6.00 in): "288 432"
 
 *OpenUI *Resolution/Resolution: PickOne
 *OrderDependency: 300 AnySetup *Resolution
@@ -210,9 +210,9 @@
 
 *zh_CN.Translation General/基本功能: ""
 *zh_CN.Translation PageSize/纸张大小: ""
-*zh_CN.PageSize w2h4/2 x 4 (50.8 mm x 101.6 mm): ""
-*zh_CN.PageSize w4h4/4 x 4 (101.6 mm x 101.6 mm): ""
-*zh_CN.PageSize w4h6/4 x 6 (101.6 mm x 152.4 mm): ""
+*zh_CN.PageSize w144h288/2 x 4 (50.8 mm x 101.6 mm): ""
+*zh_CN.PageSize w288h288/4 x 4 (101.6 mm x 101.6 mm): ""
+*zh_CN.PageSize w288h432/4 x 6 (101.6 mm x 152.4 mm): ""
 *zh_CN.Translation Resolution/分辨率: ""
 *zh_CN.Resolution 300dpi/12.0 每毫米点数 x 12.0 每毫米点数: ""
 *zh_CN.Collate True/是: ""
@@ -266,9 +266,9 @@
 
 *zh_TW.Translation General/基本設定: ""
 *zh_TW.Translation PageSize/纸张大小: ""
-*zh_TW.PageSize w2h4/2 x 4 (50.8 mm x 101.6 mm): ""
-*zh_TW.PageSize w4h4/4 x 4 (101.6 mm x 101.6 mm): ""
-*zh_TW.PageSize w4h6/4 x 6 (101.6 mm x 152.4 mm): ""
+*zh_TW.PageSize w144h288/2 x 4 (50.8 mm x 101.6 mm): ""
+*zh_TW.PageSize w288h288/4 x 4 (101.6 mm x 101.6 mm): ""
+*zh_TW.PageSize w288h432/4 x 6 (101.6 mm x 152.4 mm): ""
 *zh_TW.Translation Resolution/解析度: ""
 *zh_TW.Resolution 300dpi/12.0 每毫米點數 x 12.0 每毫米點數: ""
 *zh_TW.Translation Media/紙張設定: ""

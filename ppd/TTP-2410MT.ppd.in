@@ -6,12 +6,12 @@
 *FileVersion: "1.0"
 *LanguageVersion: English
 *LanguageEncoding: ISOLatin1
-*PCFileName: "TTP-2610MT.ppd"
+*PCFileName: "TTP-2410MT.ppd"
 *Manufacturer: "TSC"
-*Product: "(TTP-2610MT)"
-*ModelName: "TSC TTP-2610MT"
-*ShortNickName: "TSC TTP-2610MT"
-*NickName: "TSC TTP-2610MT"
+*Product: "(TTP-2410MT)"
+*ModelName: "TSC TTP-2410MT"
+*ShortNickName: "TSC TTP-2410MT"
+*NickName: "TSC TTP-2410MT"
 *PSVersion: "(3010.000) 550"
 *PSVersion: "(3010.000) 651"
 *PSVersion: "(3010.000) 652"
@@ -33,14 +33,14 @@
 
 *TscAttr tscLanguage: TSPL2
 *TscAttr tscUtility: BarCodeUtility
-*TscAttr MaxPaperWidth: 489.54
+*TscAttr MaxPaperWidth: 340.16
 
-*MaxMediaWidth: "476.22"
-*MaxMediaHeight: "41760"
+*MaxMediaWidth: "294.8"
+*MaxMediaHeight: "72000"
 *HWMargins: 0.00 0.00 0.00 0.00
 *CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/ImagingBBox null>>setpagedevice"
-*ParamCustomPageSize Width: 1 points 14.17 476.22
-*ParamCustomPageSize Height: 2 points 14.17 41760
+*ParamCustomPageSize Width: 1 points 14.17 294.8
+*ParamCustomPageSize Height: 2 points 14.17 72000
 *ParamCustomPageSize WidthOffset: 3 points 0 0
 *ParamCustomPageSize HeightOffset: 4 points 0 0
 *ParamCustomPageSize Orientation: 5 int 0 0
@@ -50,27 +50,27 @@
 
 *OpenUI *PageSize/Page Size: PickOne
 *OrderDependency: 10 AnySetup *PageSize
-*DefaultPageSize: w2h4
-*PageSize w2h4/2 x 4 (2.00 in x 4.00 in): "<</PageSize[144 288]/ImagingBBox null>>setpagedevice"
-*PageSize w4h4/4 x 4 (4.00 in x 4.00 in): "<</PageSize[288 288]/ImagingBBox null>>setpagedevice"
-*PageSize w4h6/4 x 6 (4.00 in x 6.00 in): "<</PageSize[288 432]/ImagingBBox null>>setpagedevice"
+*DefaultPageSize: w144h288
+*PageSize w144h288/2 x 4 (2.00 in x 4.00 in): "<</PageSize[144 288]/ImagingBBox null>>setpagedevice"
+*PageSize w288h288/4 x 4 (4.00 in x 4.00 in): "<</PageSize[288 288]/ImagingBBox null>>setpagedevice"
+*PageSize w288h432/4 x 6 (4.00 in x 6.00 in): "<</PageSize[288 432]/ImagingBBox null>>setpagedevice"
 *CloseUI: *PageSize
 
 *OpenUI *PageRegion/Page Size: PickOne
 *OrderDependency: 10 AnySetup *PageRegion
-*DefaultPageRegion: w2h4
-*PageRegion w2h4/2 x 4 (2.00 in x 4.00 in): "<</PageSize[144 288]/ImagingBBox null>>setpagedevice"
-*PageRegion w4h4/4 x 4 (4.00 in x 4.00 in): "<</PageSize[288 288]/ImagingBBox null>>setpagedevice"
-*PageRegion w4h6/4 x 6 (4.00 in x 6.00 in): "<</PageSize[288 432]/ImagingBBox null>>setpagedevice"
+*DefaultPageRegion: w144h288
+*PageRegion w144h288/2 x 4 (2.00 in x 4.00 in): "<</PageSize[144 288]/ImagingBBox null>>setpagedevice"
+*PageRegion w288h288/4 x 4 (4.00 in x 4.00 in): "<</PageSize[288 288]/ImagingBBox null>>setpagedevice"
+*PageRegion w288h432/4 x 6 (4.00 in x 6.00 in): "<</PageSize[288 432]/ImagingBBox null>>setpagedevice"
 *CloseUI: *PageRegion
-
-*ImageableArea w2h4/2 x 4 (2.00 in x 4.00 in): "0 0 144 288"
-*ImageableArea w4h4/4 x 4 (4.00 in x 4.00 in): "0 0 288 288"
-*ImageableArea w4h6/4 x 6 (4.00 in x 6.00 in): "0 0 288 432"
-
-*PaperDimension w2h4/2 x 4 (2.00 in x 4.00 in): "144 288"
-*PaperDimension w4h4/4 x 4 (4.00 in x 4.00 in): "288 288"
-*PaperDimension w4h6/4 x 6 (4.00 in x 6.00 in): "288 432"
+*DefaultImageableArea: w144h288
+*ImageableArea w144h288/2 x 4 (2.00 in x 4.00 in): "0 0 144 288"
+*ImageableArea w288h288/4 x 4 (4.00 in x 4.00 in): "0 0 288 288"
+*ImageableArea w288h432/4 x 6 (4.00 in x 6.00 in): "0 0 288 432"
+*DefaultPaperDimension: w144h288
+*PaperDimension w144h288/2 x 4 (2.00 in x 4.00 in): "144 288"
+*PaperDimension w288h288/4 x 4 (4.00 in x 4.00 in): "288 288"
+*PaperDimension w288h432/4 x 6 (4.00 in x 6.00 in): "288 432"
 
 *OpenUI *Resolution/Resolution: PickOne
 *OrderDependency: 300 AnySetup *Resolution
@@ -148,7 +148,7 @@
 
 *OpenUI *PrintSpeed/Print Speed: PickOne
 *OrderDependency: 110 AnySetup *PrintSpeed
-*DefaultPrintSpeed: 70
+*DefaultPrintSpeed: 80
 *PrintSpeed 20/2.00 in/sec: "%%"
 *PrintSpeed 30/3.00 in/sec: "%%"
 *PrintSpeed 40/4.00 in/sec: "%%"
@@ -160,6 +160,9 @@
 *PrintSpeed 100/10.00 in/sec: "%%"
 *PrintSpeed 110/11.00 in/sec: "%%"
 *PrintSpeed 120/12.00 in/sec: "%%"
+*PrintSpeed 130/13.00 in/sec: "%%"
+*PrintSpeed 140/14.00 in/sec: "%%"
+
 *CloseUI: *PrintSpeed
 
 *OpenUI *Darkness/Darkness: PickOne
@@ -214,9 +217,9 @@
 
 *zh_CN.Translation General/基本功能: ""
 *zh_CN.Translation PageSize/纸张大小: ""
-*zh_CN.PageSize w2h4/2 x 4 (50.8 mm x 101.6 mm): ""
-*zh_CN.PageSize w4h4/4 x 4 (101.6 mm x 101.6 mm): ""
-*zh_CN.PageSize w4h6/4 x 6 (101.6 mm x 152.4 mm): ""
+*zh_CN.PageSize w144h288/2 x 4 (50.8 mm x 101.6 mm): ""
+*zh_CN.PageSize w288h288/4 x 4 (101.6 mm x 101.6 mm): ""
+*zh_CN.PageSize w288h432/4 x 6 (101.6 mm x 152.4 mm): ""
 *zh_CN.Translation Resolution/分辨率: ""
 *zh_CN.Resolution 203dpi/8.0 每毫米点数 x 8.0 每毫米点数: ""
 *zh_CN.Collate True/是: ""
@@ -261,6 +264,8 @@
 *zh_CN.PrintSpeed 100/254.00 mm/秒: ""
 *zh_CN.PrintSpeed 110/279.40 mm/秒: ""
 *zh_CN.PrintSpeed 120/304.80 mm/秒: ""
+*zh_CN.PrintSpeed 130/330.20 mm/秒: ""
+*zh_CN.PrintSpeed 140/355.60 mm/秒: ""
 *zh_CN.Translation Darkness/深度: ""
 *zh_CN.Translation GraphicsFormat/图像格式: ""
 *zh_CN.Translation DirectBuffer/指向缓冲器: ""
@@ -274,9 +279,9 @@
 
 *zh_TW.Translation General/基本設定: ""
 *zh_TW.Translation PageSize/纸张大小: ""
-*zh_TW.PageSize w2h4/2 x 4 (50.8 mm x 101.6 mm): ""
-*zh_TW.PageSize w4h4/4 x 4 (101.6 mm x 101.6 mm): ""
-*zh_TW.PageSize w4h6/4 x 6 (101.6 mm x 152.4 mm): ""
+*zh_TW.PageSize w144h288/2 x 4 (50.8 mm x 101.6 mm): ""
+*zh_TW.PageSize w288h288/4 x 4 (101.6 mm x 101.6 mm): ""
+*zh_TW.PageSize w288h432/4 x 6 (101.6 mm x 152.4 mm): ""
 *zh_TW.Translation Resolution/解析度: ""
 *zh_TW.Resolution 203dpi/8.0 每毫米點數 x 8.0 每毫米點數: ""
 *zh_TW.Translation Media/紙張設定: ""
@@ -315,6 +320,8 @@
 *zh_TW.PrintSpeed 100/254.00 mm/秒: ""
 *zh_TW.PrintSpeed 110/279.40 mm/秒: ""
 *zh_TW.PrintSpeed 120/304.80 mm/秒: ""
+*zh_TW.PrintSpeed 130/330.20 mm/秒: ""
+*zh_TW.PrintSpeed 140/355.60 mm/秒: ""
 *zh_TW.Translation Darkness/明暗度: ""
 *zh_TW.Translation GraphicsFormat/圖形格式: ""
 *zh_TW.Translation DirectBuffer/指向緩衝區: ""

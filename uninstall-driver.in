@@ -101,14 +101,6 @@ then
 	done
 fi
 rm -rf $INSTALL_PATH/uninstall-driver
-rm -rf $INSTALL_PATH/thermalprinterui
-rm -rf $INSTALL_PATH/thermalprinterut
-rm -rf $INSTALL_PATH/thermalprinterui.png
-
-if test -f /usr/share/applications/barcodeprintersetting.desktop
-then
-  rm -rf /usr/share/applications/barcodeprintersetting.desktop
-fi
 
 echo "    restart spooler - CUPS"
 ################################################################################

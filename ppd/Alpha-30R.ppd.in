@@ -1,17 +1,17 @@
 *PPD-Adobe: "4.3"
 *%
-*% Create By CommUnit 2012/08/17 11:13
+*% Create By CommUnit 2019/03/06 11:13
 *%
 *FormatVersion: "4.3"
 *FileVersion: "1.0"
 *LanguageVersion: English
 *LanguageEncoding: ISOLatin1
-*PCFileName: "TTP-244Plus.ppd"
+*PCFileName: "Alpha-30R.ppd"
 *Manufacturer: "TSC"
-*Product: "(TTP-244 Plus)"
-*ModelName: "TSC TTP-244 Plus"
-*ShortNickName: "TSC TTP-244 Plus"
-*NickName: "TSC TTP-244 Plus"
+*Product: "(Alpha-30R)"
+*ModelName: "TSC Alpha-30R"
+*ShortNickName: "TSC Alpha-30R"
+*NickName: "TSC Alpha-30R"
 *PSVersion: "(3010.000) 550"
 *PSVersion: "(3010.000) 651"
 *PSVersion: "(3010.000) 652"
@@ -33,13 +33,13 @@
 
 *TscAttr tscLanguage: TSPL2
 *TscAttr tscUtility: BarCodeUtility
-*TscAttr MaxPaperWidth: 334.49
+*TscAttr MaxPaperWidth: 226.77
 
-*MaxMediaWidth: "306.14"
+*MaxMediaWidth: "204.09"
 *MaxMediaHeight: "6480"
 *HWMargins: 0.00 0.00 0.00 0.00
 *CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/ImagingBBox null>>setpagedevice"
-*ParamCustomPageSize Width: 1 points 14.17 306.14
+*ParamCustomPageSize Width: 1 points 14.17 204.09
 *ParamCustomPageSize Height: 2 points 14.17 6480
 *ParamCustomPageSize WidthOffset: 3 points 0 0
 *ParamCustomPageSize HeightOffset: 4 points 0 0
@@ -63,10 +63,12 @@
 *PageRegion w288h288/4 x 4 (4.00 in x 4.00 in): "<</PageSize[288 288]/ImagingBBox null>>setpagedevice"
 *PageRegion w288h432/4 x 6 (4.00 in x 6.00 in): "<</PageSize[288 432]/ImagingBBox null>>setpagedevice"
 *CloseUI: *PageRegion
+
 *DefaultImageableArea: w144h288
 *ImageableArea w144h288/2 x 4 (2.00 in x 4.00 in): "0 0 144 288"
 *ImageableArea w288h288/4 x 4 (4.00 in x 4.00 in): "0 0 288 288"
 *ImageableArea w288h432/4 x 6 (4.00 in x 6.00 in): "0 0 288 432"
+
 *DefaultPaperDimension: w144h288
 *PaperDimension w144h288/2 x 4 (2.00 in x 4.00 in): "144 288"
 *PaperDimension w288h288/4 x 4 (4.00 in x 4.00 in): "288 288"
@@ -148,7 +150,8 @@
 
 *OpenUI *PrintSpeed/Print Speed: PickOne
 *OrderDependency: 110 AnySetup *PrintSpeed
-*DefaultPrintSpeed: 40
+*DefaultPrintSpeed: 30
+*PrintSpeed 10/1.00 in/sec: "%%"
 *PrintSpeed 20/2.00 in/sec: "%%"
 *PrintSpeed 30/3.00 in/sec: "%%"
 *PrintSpeed 40/4.00 in/sec: "%%"
@@ -242,6 +245,7 @@
 *zh_CN.NegativeImage False/否: ""
 *zh_CN.Translation PrinterOptions/打印机选项: ""
 *zh_CN.Translation PrintSpeed/打印速度: ""
+*zh_CN.PrintSpeed 10/25.40 mm/秒: ""
 *zh_CN.PrintSpeed 20/50.80 mm/秒: ""
 *zh_CN.PrintSpeed 30/76.20 mm/秒: ""
 *zh_CN.PrintSpeed 40/101.60 mm/秒: ""
@@ -258,7 +262,7 @@
 
 *zh_TW.Translation General/基本設定: ""
 *zh_TW.Translation PageSize/纸张大小: ""
-*zh_TW.PageSize w144h288/2 x 4 (50.8 mm x 101.6 mm): ""
+*zh_TW.PageSize w288h288/2 x 4 (50.8 mm x 101.6 mm): ""
 *zh_TW.PageSize w288h288/4 x 4 (101.6 mm x 101.6 mm): ""
 *zh_TW.PageSize w288h432/4 x 6 (101.6 mm x 152.4 mm): ""
 *zh_TW.Translation Resolution/解析度: ""
@@ -288,6 +292,7 @@
 *zh_TW.Translation NegativeImage/反白: ""
 *zh_TW.Translation PrinterOptions/印表機選項: ""
 *zh_TW.Translation PrintSpeed/列印速度: ""
+*zh_TW.PrintSpeed 10/25.40 mm/秒: ""
 *zh_TW.PrintSpeed 20/50.80 mm/秒: ""
 *zh_TW.PrintSpeed 30/76.20 mm/秒: ""
 *zh_TW.PrintSpeed 40/101.60 mm/秒: ""

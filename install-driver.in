@@ -143,10 +143,6 @@ echo "    start copy files......"
 #
 chown -R root:root ./*
 chmod 644  ./ppd/*.ppd
-chmod 644  ./barcodeprintersetting.desktop
-chmod 644  ./thermalprinterui.png
-chmod 755  ./thermalprinterui
-chmod 755  ./thermalprinterut
 for FILTER in $FILTER_PROGRAMS; do
 	chmod 755  ./$FILTER
 done
@@ -172,18 +168,8 @@ chmod -R 755 $INSTALL_PATH/
 for FILTER in $FILTER_PROGRAMS; do
 	cp ./$FILTER $FILTER_PATH/
 done
-cp ./thermalprinterui $INSTALL_PATH/
-cp ./thermalprinterut $INSTALL_PATH/
-cp ./thermalprinterui.png $INSTALL_PATH/
 cp ./uninstall-driver $INSTALL_PATH/
 cp ./ppd/*.ppd $MODEL_PATH/@MANUFACTURER_NAME@/
-
-chmod 4755 $INSTALL_PATH/thermalprinterut
-
-if test -d /usr/share/applications/
-then
-  cp ./barcodeprintersetting.desktop /usr/share/applications/
-fi
 
 echo "    restart spooler - CUPS"
 ################################################################################
